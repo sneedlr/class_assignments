@@ -1,25 +1,40 @@
-print("Sentaur has been summoned")
-def main():
-    a = input("Enter yes to continue or no to exit:  ")
-    if a=="yes" or "y" :
-            import tkinter as tk
-            from tkinter import filedialog
-            root = tk.Tk()
-            root.withdraw()
-            file_path = filedialog.askopenfilename()
-    elif a=="no":
-            print("Goodbye")
-    numLines = 0
-    numWords = 0
-    numChars = 0
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
+Tk().withdraw()
 
-    with open(file_path,"r")as file:
-        for line in file:
-            wordsList = line.split()
-            numLines += 1
-            numWords += len(wordsList)
-            numChars += len(line)
-    print (numLines,"lines", numWords,"words &", numChars, "characters")
+print("Welcome to Sentest Counter")
+print("Lets get started")
+
+def main():
+    try:
+        numWords = 0
+        count=0
+        a = input("Enter 'Yes' to continue or 'No' to exit:")
+        if a.lower()=="yes":
+            f=askopenfilename()
+            with open(f,"r")as file:
+                for line in file:
+                    wordsList = line.split()
+                    numWords += len(wordsList)
+
+                for i in range(len(wordsList)):
+                    k=wordsList[i]
+                    if 3<= len(k) <=8:
+                        count += 1
+                    i+=1
+                per = open(f, 'r').read().count(".")
+                exc = open(f, 'r').read().count('!')
+                ques = open(f, 'r').read().count('?')
+                sentences = per + exc + ques
+                average = count / sentences
+
+                print("Number of words you have is", count)
+                print('Average words per sentence is {}'.format(average))
+        elif a.lower() == "no":
+            print("Goodbye")
+        elif a.lower() != "yes" or "no":
+            print("Please enter Yes or No")
+            main()
+    except:
+        main()
 main()
-'''total word count
-avg words per sentence'''
