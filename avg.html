@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>practice calculator</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body{
+  background-color:black;
+}
+table{
+ position: fixed;
+ top: 15%;
+ left:15%;
+}
+input{
+  background-color: transparent;
+  border-radius: 10%;
+  opacity: 0.4;
+  font-size: 75px;
+  color: white;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+}
+input:hover{
+transition-duration: 0.5s;
+opacity:1.0;
+color:#6500d1;
+}
+input:link{
+  border: none;
+}
+</style>
+<script>
+
+
+</script>
+</head>
+<body>
+​
+<form name="Calc">
+<table>
+ <tr>
+  <td colspan="4">
+   <input type="text" name="Input">
+  </td>
+ </tr>
+ <tr>
+  <td><input type="button" value="1" onclick="Calc.Input.value += '1'"></td>
+  <td><input type="button" value="2" onclick="Calc.Input.value += '2'"></td>
+  <td><INPUT TYPE="button" VALUE="3" onclick="Calc.Input.value += '3'"></td>
+  <td><input type="button" value="-" onclick="Calc.Input.value += '-'"></td>
+</tr>
+<tr>
+  <td><input type="button" value="4" onclick="Calc.Input.value += '4'"></td>
+  <td><input type="button" value="5" onclick="Calc.Input.value += '5'"></td>
+  <td><input type="button" value="6" onclick="Calc.Input.value += '6'"></td>
+  <td><input type="button" value="+" onclick="Calc.Input.value += '+'"></td>
+</tr>
+<tr>
+  <td><input type="button" value="7" onclick="Calc.Input.value += '7'"></td>
+  <td><input type="button" value="8" onclick="Calc.Input.value += '8'"></td>
+  <td><input type="button" value="9" onclick="Calc.Input.value += '9'"></td>
+  <td><input type="button" value="*" onclick="Calc.Input.value += '*'"></td>
+</tr>
+<tr>
+  <td><input type="button" value="A" onclick="avg()"></td>
+  <td colspan="2">
+   <input style="width: 70%;" type="button" value="=" onclick="Calc.Input.value = eval(Calc.Input.value)">
+  </td>
+  <td><input type="button" value="/" onclick="Calc.Input.value += '/'"></td>
+</tr>
+</table>
+</form>
+​
+</body>
+</html>
