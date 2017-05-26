@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img id="slide" src="https://68.media.tumblr.com/d41e8a3b1395646db9dd4cba4bb6dad8/tumblr_oqey9sDHgx1qzd6kwo1_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/395b88ac0184eb0b944d19e5145bfd92/tumblr_oqey9sDHgx1qzd6kwo2_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/7c135ffadf124a64a8fafa6812f483ea/tumblr_oqey9sDHgx1qzd6kwo3_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/c868e329dbf47b976270f27381b017d5/tumblr_oqey9sDHgx1qzd6kwo4_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/5394777afacbc894b5b1abca438440c3/tumblr_oqey9sDHgx1qzd6kwo5_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/6e57621c3d3be31a4adca536e3d3069e/tumblr_oqey9sDHgx1qzd6kwo8_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/2c150ab49f574715c334c033317cc38a/tumblr_oqey9sDHgx1qzd6kwo6_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/2d00d444638972d7c46de4fa222dfef6/tumblr_oqey9sDHgx1qzd6kwo7_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/395b88ac0184eb0b944d19e5145bfd92/tumblr_oqey9sDHgx1qzd6kwo2_500.gif">
+<img id="slide" src="https://68.media.tumblr.com/395b88ac0184eb0b944d19e5145bfd92/tumblr_oqey9sDHgx1qzd6kwo2_500.gif">
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n){
+	showDivs(slideIndex +=n);
+}
+
+function show(n){
+	var i;
+	var x = dpcument.getElementById("slide")
+	if(n > x.length){
+		slideIndex = 1
+	}
+	if(n < 1){
+		slideIndex = x.length
+	}
+	for(i = 0; i < x.length; i++){
+		x[i].style.display = "none";
+	}
+	x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
