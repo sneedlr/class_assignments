@@ -14,3 +14,21 @@ print("What are you grateful for?")
 grat = input(prompt)
 
 print(f"""So you said you are {who}. You want {want}. And you are grateful for {grat}. ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- As you continue to ask the questions and spend time each day in the expanded awareness of meditation, the answers will come, perhaps when you’re meditating or perhaps when you’re out in the world going about your everyday activities. Following these steps will expand your ability to follow the trail of your destiny as it unfolds before you moment by moment. ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------""")
+'''
+from sys import argv
+#get a filename
+script, filename = argv
+#open file
+txt = open(filename)
+#print it out
+print(f"Here's your file {filename}:")
+#call a function on txt named read
+print(txt.read())
+#print it out
+print("Type the filename again:")
+file_again = input("> ")
+
+txt_again = open(file_again)
+
+print(txt_again.read())
+'''
